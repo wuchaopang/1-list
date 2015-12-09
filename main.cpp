@@ -8,11 +8,10 @@
 
 
 #include <iostream>
-#include <string.h>
 struct student
 {
     char name[100];
-    int number;
+    int age;
     student *next;
 };
 int main(int argc, const char * argv[])
@@ -27,13 +26,13 @@ int main(int argc, const char * argv[])
         q=new student;
         p->next=q;
         q->next=0;
-        scanf("%s %d\n",q->name,&(q->number));
+        scanf("%s %d\n",q->name,&(q->age));
         p=q;
     }
     p=head->next;
     while(p!=0)
     {
-        printf("%s %d\n",p->name,p->number);
+        printf("%s %d\n",p->name,p->age);
         p=p->next;
     }
     return 0;
